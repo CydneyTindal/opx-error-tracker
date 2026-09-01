@@ -138,19 +138,19 @@
 
   <!-- Tab Bar -->
   <div class="tab-bar">
-    <button class="tab-btn" onclick="switchTab(&#39;sportsbook&#39;, this)">
+    <button class="tab-btn active" onclick="switchTab(&#39;sportsbook&#39;, this)">
       Sportsbook <span class="tab-count">2</span>
     </button>
     <button class="tab-btn green-tab" onclick="switchTab(&#39;module&#39;, this)">
       Parlay Module <span class="tab-count" style="background:rgba(86,211,100,0.12);color:#56d364;">0</span>
     </button>
-    <button class="tab-btn active" onclick="switchTab(&#39;flywheel&#39;, this)">
+    <button class="tab-btn" onclick="switchTab(&#39;flywheel&#39;, this)">
       Flywheel <span class="tab-count">4*</span>
     </button>
   </div>
 
   <!-- ══════════════ SPORTSBOOK TAB ══════════════ -->
-  <div id="tab-sportsbook" class="tab-panel">
+  <div id="tab-sportsbook" class="tab-panel active">
 
     <div class="card">
       <div class="card-title">Summary</div>
@@ -213,7 +213,7 @@
         <div class="legend-item"><div class="legend-swatch" style="background:#484f58;"></div>OKR Not Met</div>
       </div>
       <div class="chart-wrap" style="height:220px;">
-        <canvas id="trendChart" role="img" aria-label="6-month error trend Apr–Aug 2026" width="798" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 798px;">Apr: 5, May: 3, Jun: 6, Jul: 6, Aug: 2.</canvas>
+        <canvas id="trendChart" role="img" aria-label="6-month error trend Apr–Aug 2026" width="1596" height="440" style="display: block; box-sizing: border-box; height: 220px; width: 798px;">Apr: 5, May: 3, Jun: 6, Jul: 6, Aug: 2.</canvas>
       </div>
       <div style="display:flex;justify-content:space-between;margin-top:12px;align-items:center;">
         <span style="font-size:11px;color:#56d364;background:rgba(86,211,100,0.1);padding:3px 10px;border-radius:4px;font-weight:500;">August: OKR Met (99.98%) &nbsp;·&nbsp; All errors low severity</span>
@@ -232,13 +232,13 @@
           <div class="legend-item"><div class="legend-swatch" style="background:#484f58;"></div>Config</div>
         </div>
         <div class="chart-wrap" style="height:180px;">
-          <canvas id="typeChart" role="img" aria-label="Stacked error types by month" width="358" height="180" style="display: block; box-sizing: border-box; height: 180px; width: 358px;">Error type breakdown by month.</canvas>
+          <canvas id="typeChart" role="img" aria-label="Stacked error types by month" width="716" height="360" style="display: block; box-sizing: border-box; height: 180px; width: 358px;">Error type breakdown by month.</canvas>
         </div>
       </div>
       <div class="card" style="margin-bottom:0;">
         <div class="card-title">By sport (Apr–Aug)</div>
         <div class="chart-wrap" style="height:220px;">
-          <canvas id="sportChart" role="img" aria-label="Errors by sport Apr-Aug 2026" width="358" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 358px;">Soccer/WC: 7, Golf: 4, NBA: 3, NFL: 2, Basketball: 1, NHL: 1, F1: 1, WNBA: 1, Baseball: 1, UFC: 1.</canvas>
+          <canvas id="sportChart" role="img" aria-label="Errors by sport Apr-Aug 2026" width="716" height="440" style="display: block; box-sizing: border-box; height: 220px; width: 358px;">Soccer/WC: 7, Golf: 4, NBA: 3, NFL: 2, Basketball: 1, NHL: 1, F1: 1, WNBA: 1, Baseball: 1, UFC: 1.</canvas>
         </div>
       </div>
     </div>
@@ -310,7 +310,7 @@
           <div class="legend-item"><div style="width:20px;height:2px;background:#e3b341;display:inline-block;margin-bottom:1px;"></div><span style="margin-left:4px;">OKR ceiling</span></div>
         </div>
         <div class="chart-wrap" style="height:260px;">
-          <canvas id="yoyChart" role="img" aria-label="Monthly error count July 2022 to July 2026" width="798" height="260" style="display: block; box-sizing: border-box; height: 260px; width: 798px;">Historical monthly errors.</canvas>
+          <canvas id="yoyChart" role="img" aria-label="Monthly error count July 2022 to July 2026" width="1596" height="520" style="display: block; box-sizing: border-box; height: 260px; width: 798px;">Historical monthly errors.</canvas>
         </div>
       </div>
 
@@ -318,13 +318,13 @@
         <div class="card" style="margin-bottom:0;">
           <div class="card-title">Annual average vs OKR ceiling</div>
           <div class="chart-wrap" style="height:200px;">
-            <canvas id="annualAvgChart" role="img" aria-label="Annual average errors vs OKR ceiling" width="358" height="200" style="display: block; box-sizing: border-box; height: 200px; width: 358px;">Annual averages vs OKR ceiling.</canvas>
+            <canvas id="annualAvgChart" role="img" aria-label="Annual average errors vs OKR ceiling" width="716" height="400" style="display: block; box-sizing: border-box; height: 200px; width: 358px;">Annual averages vs OKR ceiling.</canvas>
           </div>
         </div>
         <div class="card" style="margin-bottom:0;">
           <div class="card-title">US vs Canada error split</div>
           <div class="chart-wrap" style="height:200px;">
-            <canvas id="splitChart" role="img" aria-label="US vs Canada error split by year" width="358" height="200" style="display: block; box-sizing: border-box; height: 200px; width: 358px;">US vs Canada errors by year.</canvas>
+            <canvas id="splitChart" role="img" aria-label="US vs Canada error split by year" width="716" height="400" style="display: block; box-sizing: border-box; height: 200px; width: 358px;">US vs Canada errors by year.</canvas>
           </div>
         </div>
       </div>
@@ -365,7 +365,7 @@
   </div>
 
   <!-- ══════════════ FLYWHEEL TAB ══════════════ -->
-  <div id="tab-flywheel" class="tab-panel active">
+  <div id="tab-flywheel" class="tab-panel">
     <div class="card">
       <div class="card-title">Summary — Flywheel</div>
       <p class="summary-text">
@@ -441,13 +441,13 @@
           <div class="legend-item"><div class="legend-swatch" style="background:#a78bfa;"></div>Scoring</div>
         </div>
         <div class="chart-wrap" style="height:180px;">
-          <canvas id="flyTypeChart" role="img" aria-label="Flywheel errors by type July 2026" height="180" style="display: block; box-sizing: border-box; height: 180px; width: 358px;" width="358">Config: 3, Scoring: 1.</canvas>
+          <canvas id="flyTypeChart" role="img" aria-label="Flywheel errors by type July 2026" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">Config: 3, Scoring: 1.</canvas>
         </div>
       </div>
       <div class="card" style="margin-bottom:0;">
         <div class="card-title">By sport — July 2026 (provisional)</div>
         <div class="chart-wrap" style="height:180px;">
-          <canvas id="flySportChart" role="img" aria-label="Flywheel errors by sport July 2026" height="180" style="display: block; box-sizing: border-box; height: 180px; width: 358px;" width="358">MLB: 3, Soccer/WC: 1.</canvas>
+          <canvas id="flySportChart" role="img" aria-label="Flywheel errors by sport July 2026" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">MLB: 3, Soccer/WC: 1.</canvas>
         </div>
       </div>
     </div>
@@ -500,7 +500,7 @@
           <div class="legend-item"><div class="legend-swatch" style="background:#e3b341;"></div>July — provisional</div>
         </div>
         <div class="chart-wrap" style="height:220px;">
-          <canvas id="flyYoyChart" role="img" aria-label="Flywheel monthly error count August 2025 to July 2026" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 798px;" width="798">Monthly errors: mostly zero, 1 in Sep 2025, provisional 4 in Jul 2026.</canvas>
+          <canvas id="flyYoyChart" role="img" aria-label="Flywheel monthly error count August 2025 to July 2026" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">Monthly errors: mostly zero, 1 in Sep 2025, provisional 4 in Jul 2026.</canvas>
         </div>
         <p style="font-size:10px;color:#484f58;margin-top:10px;">Mar–Jun 2026 shown as 0 (no monthly tracker distributed). July 2026 is provisional, pending the official tracker.</p>
       </div>
@@ -552,7 +552,7 @@
       </div>
       <div style="background:#21262d;border-radius:10px;padding:14px 16px;text-align:center;">
         <div style="font-size:22px;font-weight:700;color:#56d364;">0</div>
-        <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;margin-top:3px;">July Errors</div>
+        <div style="font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:1px;margin-top:3px;">Aug Errors</div>
       </div>
     </div>
 
@@ -566,7 +566,7 @@
           <div class="legend-item"><div class="legend-swatch" style="background:#484f58;"></div>Other</div>
         </div>
         <div class="chart-wrap" style="height:220px;">
-          <canvas id="modSportChart" role="img" aria-label="July 2026 module cards by sport" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 358px;" width="358">MLB: 197, Soccer: 104, WNBA: 65, UFC: 17, Tennis: 10, Golf: 4, Boxing: 2, Multi-Sport: 1</canvas>
+          <canvas id="modSportChart" role="img" aria-label="July 2026 module cards by sport" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">MLB: 197, Soccer: 104, WNBA: 65, UFC: 17, Tennis: 10, Golf: 4, Boxing: 2, Multi-Sport: 1</canvas>
         </div>
       </div>
       <div class="card" style="margin-bottom:0;">
@@ -577,7 +577,7 @@
           <div class="legend-item"><div class="legend-swatch" style="background:#56d364;"></div>SGP+</div>
         </div>
         <div class="chart-wrap" style="height:220px;">
-          <canvas id="modBetChart" role="img" aria-label="July 2026 module cards by bet type" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 358px;" width="358">SGP: 209, Parlay: 157, SGP+: 34</canvas>
+          <canvas id="modBetChart" role="img" aria-label="July 2026 module cards by bet type" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">SGP: 209, Parlay: 157, SGP+: 34</canvas>
         </div>
       </div>
     </div>
@@ -589,7 +589,7 @@
         <div class="legend-item"><div style="width:20px;height:2px;background:#e3b341;display:inline-block;margin-bottom:1px;"></div><span style="margin-left:4px;">World Cup / peak events</span></div>
       </div>
       <div class="chart-wrap" style="height:220px;">
-        <canvas id="modMonthChart" role="img" aria-label="Module cards by month 2026" height="220" style="display: block; box-sizing: border-box; height: 220px; width: 798px;" width="798">Monthly card volume Jan-Jul 2026.</canvas>
+        <canvas id="modMonthChart" role="img" aria-label="Module cards by month 2026" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">Monthly card volume Jan-Jul 2026.</canvas>
       </div>
       <p style="font-size:10px;color:#484f58;margin-top:10px;">* Monthly totals estimated from Asana section sampling. Project total: 3,884 cards across all sections.</p>
     </div>
@@ -597,7 +597,7 @@
     <div class="card">
       <div class="card-title">Sport dominance by month</div>
       <div class="chart-wrap" style="height:240px;">
-        <canvas id="modStackChart" role="img" aria-label="Stacked sport breakdown by month Jan-Jul 2026" height="240" style="display: block; box-sizing: border-box; height: 240px; width: 798px;" width="798">Sport mix by month.</canvas>
+        <canvas id="modStackChart" role="img" aria-label="Stacked sport breakdown by month Jan-Jul 2026" height="0" style="display: block; box-sizing: border-box; height: 0px; width: 0px;" width="0">Sport mix by month.</canvas>
       </div>
     </div>
 
